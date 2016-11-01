@@ -232,8 +232,8 @@
 
 					<div class="contact-row">
 
-						<div class="columns small-24 large-16"><a href="#" target="_blank"><i class="icon-mail-alt"></i> luke@evidentagenda.com</a></div>
-						<div class="columns small-24 large-8"><a href="#" target="_blank"><i class="icon-skype"></i> lukasz.jakimowicz</a></div>
+						<div class="columns small-24 large-16"><a href="mailto:luke@evidentagenda.com"><i class="icon-mail-alt"></i> luke@evidentagenda.com</a></div>
+						<div class="columns small-24 large-8"><a href="skype:lukasz.jakimowicz"><i class="icon-skype"></i> lukasz.jakimowicz</a></div>
 
 					</div>
 					<div class="contact-row social">
