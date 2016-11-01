@@ -46,9 +46,6 @@ function onload() {
 			setTimeout(function() { $(".loader").remove(); }, 5000);
 		}, 1000);
 
-		// kill the preloader element
-		
-
 	}, 500);
 
 

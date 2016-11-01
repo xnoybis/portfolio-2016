@@ -12,6 +12,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Muli|Oswald:300,700" rel="stylesheet"/>
 	<link rel="stylesheet" href="css/foundation.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
+	<!--[if lte IE 9]><style>.loader { display: none; }</style><![endif]-->
 
 
 	
