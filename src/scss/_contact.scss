@@ -30,9 +30,9 @@
 					}
 
 					[class^="icon-"]:before, [class*=" icon-"]:before {
+						line-height: 1.5;
 						margin-left: rem-calc(5);
 						margin-right: rem-calc(15);
-						line-height: rem-calc(48);
 					}
 				}
 			}
@@ -116,13 +116,11 @@
 						}
 
 						[class^="icon-"]:before, [class*=" icon-"]:before {
+							line-height: 0.7;
 							margin: auto;
 						}
 
 						&:hover {
-							i {
-
-							}
 							padding-top: rem-calc(20);
 							padding-bottom: rem-calc(40);
 						}
