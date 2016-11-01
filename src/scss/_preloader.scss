@@ -1,0 +1,236 @@
+@-webkit-keyframes preloader {
+	0% {
+		-webkit-transform: rotateY(0deg);
+	}
+	50% {
+		-webkit-transform: rotateY(180deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(180deg);
+	}
+}
+
+@keyframes preloader {
+	0% {
+		-webkit-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+	}
+	50% {
+		-webkit-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(180deg);
+		-ms-transform: rotateZ(180deg);
+		transform: rotateZ(180deg);
+	}
+}
+
+
+@-webkit-keyframes drop {
+	0% {
+		-webkit-transform: translateY(0px);
+	}
+	100% {
+		-webkit-transform: translateY(1200px);
+	}
+}
+
+@keyframes drop {
+	0% {
+		-webkit-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+	100% {
+		-webkit-transform: translateY(1200px);
+		-ms-transform: translateY(1200px);
+		transform: translateY(1200px);
+	}
+}
+
+@-webkit-keyframes splitline {
+	0% {
+		max-height: 0;
+	}
+	50% {
+		max-height: 100%;
+	}
+	100% {
+		max-height: 100%;
+	}
+}
+
+@keyframes splitline {
+	0% {
+		max-height: 0;
+	}
+	50% {
+		max-height: 100%;
+	}
+	100% {
+		max-height: 100%;
+	}
+}
+
+@-webkit-keyframes panes {
+	0% {
+		width: 50%;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+
+@keyframes panes {
+	0% {
+		width: 50%;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+
+.loader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;	
+	left: 0;
+	z-index: 9996;
+	text-align: center;
+	display: table;
+	overflow: hidden;
+
+	.pane-left, .pane-right, .split-line {
+		background-color: #fff;
+		width: calc(50% + 2px);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -1px;
+		z-index: 9997;
+	}
+	.pane-right {
+		left: auto;
+		right: -1px;
+		border-left: solid 1px $black;
+		z-index: 9996;
+	}
+
+	.split-line {
+		box-sizing: border-box;
+		z-index: 9998;
+		width: 100%;
+		max-height: 0px;
+		overflow: hidden;
+		border-right: solid 1px #020202;
+		left: 0;
+	}
+
+	.holder {
+		display: table-cell;
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+
+		span {
+			display: block;
+			width: 14px;
+			height: 14px;
+			background-color: #020202;
+			margin-top: 3px;
+			margin-bottom: 3px;
+			-webkit-animation: preloader 1.5s infinite;
+			animation: preloader 1.5s infinite;
+
+			&:nth-of-type(5n+1) {
+				-webkit-animation-delay: $preloader-rotation-delay + ms;
+				animation-delay: $preloader-rotation-delay + ms;
+			}
+
+			&:nth-of-type(5n+2) {
+				-webkit-animation-delay: 2*$preloader-rotation-delay + ms;
+				animation-delay: 2*$preloader-rotation-delay + ms;
+			}
+
+			&:nth-of-type(5n+3) {
+				-webkit-animation-delay: 3*$preloader-rotation-delay + ms;
+				animation-delay: 3*$preloader-rotation-delay + ms;
+			}
+
+			&:nth-of-type(5n+4) {
+				-webkit-animation-delay: 4*$preloader-rotation-delay + ms;
+				animation-delay: 4*$preloader-rotation-delay + ms;
+			}
+
+			&:nth-of-type(5n+5) {
+				-webkit-animation-delay: 5*$preloader-rotation-delay + ms;
+				animation-delay: 5*$preloader-rotation-delay + ms;
+			}
+		}
+	}
+
+
+	.wrap {
+		display: inline-block;
+		width: 14px;
+		position: relative;
+		z-index: 9999;
+	}
+
+	&.loaded {
+
+		.split-line {
+			-webkit-animation: splitline 2s forwards cubic-bezier(0.250, 0.250, 0.015, 0.995);
+			animation: splitline 2s forwards cubic-bezier(0.250, 0.250, 0.015, 0.995);
+			-webkit-animation-delay: 450ms;
+			animation-delay: 450ms;
+		}
+
+		.pane-left, .pane-right {
+			-webkit-animation: panes 500ms forwards ease-out;
+			-webkit-animation-delay: 1500ms;
+			animation: panes 500ms forwards ease-out;
+			animation-delay: 1500ms;
+		}
+
+		.holder {
+
+			span {
+				-webkit-animation: drop 1s forwards ease-in;
+				animation: drop 1s forwards ease-in;
+
+				&:nth-of-type(5n+5) {
+					-webkit-animation-delay: $preloader-drop-delay + ms;
+					animation-delay: $preloader-drop-delay + ms;
+				}
+
+				&:nth-of-type(5n+4) {
+					-webkit-animation-delay: 2*$preloader-drop-delay + ms;
+					animation-delay: 2*$preloader-drop-delay + ms;
+				}
+
+				&:nth-of-type(5n+3) {
+					-webkit-animation-delay: 3*$preloader-drop-delay + ms;
+					animation-delay: 3*$preloader-drop-delay + ms;
+				}
+
+				&:nth-of-type(5n+2) {
+					-webkit-animation-delay: 4*$preloader-drop-delay + ms;
+					animation-delay: 4*$preloader-drop-delay + ms;
+				}
+
+				&:nth-of-type(5n+1) {
+					-webkit-animation-delay: 5*$preloader-drop-delay + ms;
+					animation-delay: 5*$preloader-drop-delay + ms;
+				}
+			}
+		}
+	}
+
+}

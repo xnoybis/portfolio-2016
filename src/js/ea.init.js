@@ -39,6 +39,13 @@ function onload() {
 		// ea.ui.js - enable click, scrolling event handlers
 		enableInteractions();
 
+		// play out the preloader
+		setTimeout(function() { $(".loader").addClass("loaded"); }, 1000);
+
+		// kill the preloader element
+		setTimeout(function() { $(".loader").remove(); }, 5000);
+
 	}, 500);
-	
+
+
 }

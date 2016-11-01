@@ -130,10 +130,15 @@ function resize() {
 	$(".profile-image").find("div").css("height", Math.ceil($(".profile-image").outerHeight(false)));
 	$(".profile-head > div").each(function() {
 		$(this).find("a, div").css("height", "");
-		if (!$(this).hasClass("profile-cv") || isLarge) $(this).find("div").css("height", Math.floor($(".profile-image div").outerHeight(false)));
+		$(this).find("a").css("height", "");
+		if (!$(this).hasClass("profile-cv") || isLarge) {
 
-		// ie table-cell height hack
-		$(this).find("a").css("height", Math.floor($(".profile-image div").outerHeight(false))-2);
+			$(this).find("div").css("height", Math.floor($(".profile-image div").outerHeight(false)));
+
+			// ie table-cell height hack
+			$(this).find("a").css("height", "");
+			$(this).find("a").css("height", Math.floor($(".profile-image div").outerHeight(false))-2);
+		}
 	});
 
 

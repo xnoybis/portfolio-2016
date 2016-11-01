@@ -9,13 +9,28 @@
 	<meta name="keywords" content=""/>
 
 	<title>Document</title>
-	
 	<link href="https://fonts.googleapis.com/css?family=Muli|Oswald:300,700" rel="stylesheet"/>
 	<link rel="stylesheet" href="css/foundation.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
+
+
 	
 </head>
 <body>
+
+	<div class="loader">
+		<div class="pane-left"><div class="split-line"></div></div>
+		<div class="pane-right"></div>		
+		<div class="holder">
+			<div class="wrap">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
 
 	<div class="site">
 
