@@ -1,0 +1,74 @@
+html {
+	height: 100%;
+}
+
+*, :before, :after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.works-list a, .brands-list li {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	perspective: 1000;
+
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  	background-color: $black;
+  	color: #fff;
+}
+::-moz-selection {
+ 	background-color: $black;
+  	color: #fff;
+}
+
+.medium, .large, .xlarge, .xxlarge {
+	display: none;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+
+@include breakpoint(medium) {
+
+	.medium {
+		display: block;
+	}
+
+}
+
+@include breakpoint(large) {
+
+	.large {
+		display: block;
+	}
+
+}
+
+@include breakpoint(xlarge) {
+
+	.xlarge {
+		display: block;
+	}
+
+}
+
+@include breakpoint(xxlarge) {
+
+	.xxlarge {
+		display: block;
+	}
+
+}
+

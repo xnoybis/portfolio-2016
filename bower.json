@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-2016",
+  "description": "Portfolio 2016",
+  "main": "",
+  "authors": [
+    {"name": "Luke Jakimowicz", "email": "luke@evidentagenda.com"}
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.2.0"
+  }
+}
