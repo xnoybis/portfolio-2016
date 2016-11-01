@@ -62,7 +62,7 @@
 				</section>
 
 				<section class="skill-legend small-24">
-					<h5>Skillset overview</h5>
+					<h5>Skillset legend</h5>
 					<ul>
 						<li>primary skills</li>
 						<li class="secondary">secondary skills</li>
