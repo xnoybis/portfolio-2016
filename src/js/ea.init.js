@@ -10,6 +10,7 @@ var currentScroll = 0,
 	isXlarge = false, 
 	isXXlarge = false, 
 	projectsOpened = false, 
+	parallaxOffset = 0,
 	lastPosition = 0;
 
 // some people browse their internets on a tasty potato, short of measuring fps it's probably best to take it easy on them

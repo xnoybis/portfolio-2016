@@ -14,8 +14,6 @@
 	<link rel="stylesheet" href="css/style.css"/>
 	<!--[if lte IE 9]><style>.loader { display: none; }</style><![endif]-->
 
-
-	
 </head>
 <body>
 

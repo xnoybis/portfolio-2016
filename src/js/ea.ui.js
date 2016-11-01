@@ -8,6 +8,14 @@ function resize() {
 	winW = $(window).width();
 	genPadding = Math.floor(0.03*winW);
 
+	// how strong the parallax offset is
+
+	if (winW > winH) {
+		parallaxOffset = Math.floor(winH/1.5);
+	} else {
+		parallaxOffset = Math.floor(winH/3);
+	}
+
 	// checking helper elements
 
 	isMedium = $(".medium").is(":visible");
@@ -43,10 +51,9 @@ function resize() {
 		$(this).find("header .wrapper").css("min-height", Math.floor(headerH)+"px");
 		var startPos = Math.floor(($(this).find("header").outerHeight(false) - $(this).find(".holder").outerHeight(false))/2);
 		if (isXlarge) startPos += 30;
-		var offset = Math.floor(winH/1.5);
 
 		if (mobileParallax || isXlarge) {
-			$(this).find("header .holder").css("top",Math.floor(startPos-(offset/2)));
+			$(this).find("header .holder").css("top",Math.floor(startPos-(parallaxOffset/2)));
 		} else {
 			$(this).find("header .holder").css("transform","");
 			$(this).find("header .holder").css("top",Math.floor(startPos));
@@ -195,14 +202,11 @@ function updatePosition(force) {
 
 					if (mobileParallax || isXlarge) {
 
-						// offset its default position
-						var offset = Math.floor(winH/1.5);
-
 						// calculate percentage of the parallax enabled area already scrolled
 						var perc = (currentScroll-sectionStart)/(sectionEnd-sectionStart);
 
 						// redraw using translateY
-						requestAnimationFrame(function() {redrawParallax(elem, Math.floor(perc*offset)) });
+						requestAnimationFrame(function() {redrawParallax(elem, Math.floor(perc*parallaxOffset)) });
 
 					} else {
 						requestAnimationFrame(function() {redrawParallax(elem, 0) });
