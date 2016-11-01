@@ -94,6 +94,25 @@
 	}
 }
 
+@-webkit-keyframes close {
+	0% {
+		max-height: 100%;
+	}
+	100% {
+		max-height: 0;
+	}
+}
+
+@keyframes close {
+	0% {
+		max-height: 100%;
+	}
+	100% {
+		max-height: 0;
+	}
+}
+
+
 
 .loader {
 	position: fixed;
@@ -184,6 +203,11 @@
 	}
 
 	&.loaded {
+
+		-webkit-animation: close 10ms forwards ease-out;
+		-webkit-animation-delay: 2000ms;
+		animation: close 10ms forwards ease-out;
+		animation-delay: 2000ms;
 
 		.split-line {
 			-webkit-animation: splitline 2s forwards cubic-bezier(0.250, 0.250, 0.015, 0.995);

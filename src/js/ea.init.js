@@ -44,7 +44,7 @@ function onload() {
 		setTimeout(function() { 
 			$(".loader").addClass("loaded"); 
 			$(window).scrollTop(0);
-			setTimeout(function() { $(".loader").remove(); }, 5000);
+			setTimeout(function() { $(".loader").remove(); }, 3000);
 		}, 1000);
 
 	}, 500);
