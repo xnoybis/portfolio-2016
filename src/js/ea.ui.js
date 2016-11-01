@@ -13,7 +13,7 @@ function resize() {
 	if (winW > winH) {
 		parallaxOffset = Math.floor(winH/1.5);
 	} else {
-		parallaxOffset = Math.floor(winH/3);
+		parallaxOffset = 50;
 	}
 
 	// checking helper elements
@@ -52,7 +52,7 @@ function resize() {
 		var startPos = Math.floor(($(this).find("header").outerHeight(false) - $(this).find(".holder").outerHeight(false))/2);
 		if (isXlarge) startPos += 30;
 
-		if (mobileParallax || isXlarge) {
+		if (mobileParallax || isLarge) {
 			$(this).find("header .holder").css("top",Math.floor(startPos-(parallaxOffset/2)));
 		} else {
 			$(this).find("header .holder").css("transform","");
@@ -200,7 +200,7 @@ function updatePosition(force) {
 
 				if (currentScroll >= sectionStart && currentScroll <= sectionEnd) {
 
-					if (mobileParallax || isXlarge) {
+					if (mobileParallax || isLarge) {
 
 						// calculate percentage of the parallax enabled area already scrolled
 						var perc = (currentScroll-sectionStart)/(sectionEnd-sectionStart);
