@@ -40,10 +40,14 @@ function onload() {
 		enableInteractions();
 
 		// play out the preloader
-		setTimeout(function() { $(".loader").addClass("loaded"); }, 1000);
+		setTimeout(function() { 
+			$(".loader").addClass("loaded"); 
+			$(window).scrollTop(0);
+			setTimeout(function() { $(".loader").remove(); }, 5000);
+		}, 1000);
 
 		// kill the preloader element
-		setTimeout(function() { $(".loader").remove(); }, 5000);
+		
 
 	}, 500);
 
