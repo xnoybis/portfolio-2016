@@ -51,11 +51,11 @@
 
 		<div class="wrap columns">
 
-			<!--<section class="page home columns small-24">
+			<section class="page home dark row" id="home">
 
 			</section>
-			-->
-			<section class="page profile dark row">
+
+			<section class="page profile dark row" id="profile">
 
 				<header>
 					<div class="wrapper">
@@ -197,7 +197,7 @@
 
 			</section>
 
-			<section class="page projects dark row">
+			<section class="page projects dark row" id="projects">
 
 				<header>
 
@@ -246,7 +246,7 @@
 
 			</section>
 
-			<section class="page contact dark row">
+			<section class="page contact dark row" id="contact">
 
 				<header>
 

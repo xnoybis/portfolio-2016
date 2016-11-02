@@ -178,7 +178,30 @@ function enableInteractions() {
 
 	$(".menu-toggle").on("click", function(e) {
 		e.preventDefault();
+		if ($("nav").hasClass("opened")) {
+			$(window).scrollTop(parseInt($("nav").data("scrollback"), 10));
+		} else {
+			$("nav").data("scrollback", $(window).scrollTop());
+		}
 		$("nav").toggleClass("opened");
+		
+	});
+
+	$(".nav-items a").on("click", function(e) {
+		e.preventDefault();
+		if ($(this).parent().hasClass("theme")) {
+
+		} else {
+			var id = $(this).attr("href");
+			$("nav").removeClass("opened");
+			var targetScroll = Math.ceil($(id).offset().top - $("nav").outerHeight(false));
+			if (isXlarge) targetScroll += $(id).find(".header-cover").outerHeight(false);
+
+			var dist = Math.abs( $(window).scrollTop() - targetScroll );
+			$("html, body").animate({ 
+				scrollTop: targetScroll
+			}, 800, "easeOutCubic");
+		}
 	});
 
 }
