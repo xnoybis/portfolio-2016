@@ -176,6 +176,11 @@ function enableInteractions() {
 		closeProjects();
 	});
 
+	$(".menu-toggle").on("click", function(e) {
+		e.preventDefault();
+		$("nav").toggleClass("opened");
+	});
+
 }
 
 function updatePosition(force) {

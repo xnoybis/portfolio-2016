@@ -33,6 +33,22 @@
 
 	<div class="site">
 
+		<nav class="columns">
+			<div class="nav-content row">
+				<a class="logo" title="Evident Agenda" href="#home"></a>
+				<ul class="nav-items">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li class="theme first"><a class="theme-default"></a></li>
+					<li class="theme"><a class="theme-black"></a></li>
+					<li class="theme"><a class="theme-gray"></a></li>
+				</ul>
+				<a class="menu-toggle"><span></span><span></span><span></span><span></span></a>
+			</div>
+		</nav>
+
 		<div class="wrap columns">
 
 			<!--<section class="page home columns small-24">

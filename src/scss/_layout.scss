@@ -2,12 +2,12 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
+	padding-top: $nav-height;
 }
 
 .wrap {
 	position: relative;
 }
-
 
 .debug {
 	position: fixed;
