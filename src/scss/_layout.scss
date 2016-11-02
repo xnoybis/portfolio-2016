@@ -1,12 +1,14 @@
 .site {
 	position: relative;
-	overflow: hidden;
 	width: 100%;
 	padding-top: $nav-height;
+	min-height: 100%;
+	overflow: hidden;
 }
 
 .wrap {
 	position: relative;
+	overflow: hidden;
 }
 
 .debug {

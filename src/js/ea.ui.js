@@ -6,6 +6,7 @@ function resize() {
 
 	winH = $(window).height();
 	winW = $(window).width();
+	navH = $("nav").find(".logo").outerHeight(false);
 	genPadding = Math.floor(0.03*winW);
 
 	// how strong the parallax offset is
@@ -148,6 +149,7 @@ function resize() {
 		}
 	});
 
+	if (isLarge) $("nav").removeClass("opened");
 
 	updatePosition(true);
 
@@ -178,13 +180,7 @@ function enableInteractions() {
 
 	$(".menu-toggle").on("click", function(e) {
 		e.preventDefault();
-		if ($("nav").hasClass("opened")) {
-			$(window).scrollTop(parseInt($("nav").data("scrollback"), 10));
-		} else {
-			$("nav").data("scrollback", $(window).scrollTop());
-		}
 		$("nav").toggleClass("opened");
-		
 	});
 
 	$(".nav-items a").on("click", function(e) {
@@ -194,7 +190,8 @@ function enableInteractions() {
 		} else {
 			var id = $(this).attr("href");
 			$("nav").removeClass("opened");
-			var targetScroll = Math.ceil($(id).offset().top - $("nav").outerHeight(false));
+			
+			var targetScroll = Math.ceil($(id).offset().top - navH);
 			if (isXlarge) targetScroll += $(id).find(".header-cover").outerHeight(false);
 
 			var dist = Math.abs( $(window).scrollTop() - targetScroll );

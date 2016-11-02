@@ -4,6 +4,11 @@ nav {
 	top: 0;
 	z-index: 9000;
 	border-bottom: solid 1px #fff;
+	left: 0;
+
+	&.columns {
+		padding: 0;
+	}
 
 	.nav-content {
 		background-color: #fff;
@@ -14,6 +19,8 @@ nav {
 		-o-transition: .25s ease-in-out;
 		transition: .25s ease-in-out;
 		overflow: hidden;
+		padding-left: rem-calc(10);
+		padding-right: rem-calc(10);
 		@include clearfix;
 
 		.logo {
@@ -78,54 +85,77 @@ nav {
 		}
 
 		.nav-items {
-			display: none;
+			display: block;
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
 			text-align: left;
-			float: right;
-			margin-top: rem-calc(9);
-			margin-left: rem-calc(10);
+			float: none;
+			clear: both;
+			padding-top: rem-calc(10);
+			border-top: solid 1px $black;
+			
 
 			li {
-				display: inline-block;
 				@include oswald;
-				text-transform: uppercase;
+				display: block;
 				line-height: rem-calc(30);
+				width: 50%;
+				float: left;
+				margin-bottom: rem-calc(10);
+				font-weight: 700;
 				text-align: center;
+				text-transform: uppercase;					
 
 				a {
-					display: inline-block;
-					color: $black;
+					display: block;
 					text-decoration: none;
+					width: 100%;
+					color: #fff;
 					padding-left: rem-calc(10);
 					padding-right: rem-calc(10);
-					line-height: rem-calc(32);
-					font-size: rem-calc(14);
+					line-height: rem-calc(60);
+					font-size: rem-calc(20);
 					cursor: pointer;
+					background-color: $black;
 
 					&:hover {
-						background-color: $black;
-						color: #fff;
+						background-color: #fff;
+						color: $black;
 					}
+				}
+
+				&:nth-of-type(odd) {
+					padding-right: rem-calc(5);
+				}
+
+				&:nth-of-type(even) {
+					padding-left: rem-calc(5);
+				}
+
+				&.theme-title {
+					@include muli;
+					width: 100%;
+					font-weight: 300;
+					font-size: rem-calc(12);
+					line-height: rem-calc(20);
+					text-align: left;
+					margin: 0;
+					text-transform: none;
 				}
 
 				&.theme {
 
-					padding-left: rem-calc(3);
-					padding-right: rem-calc(3);
+					width: auto;
+					padding: 0;
+					padding-right: rem-calc(10);
 
 					a {
 						padding: 0;
-						width: rem-calc(13);
+						width: rem-calc(35);
 						border: solid 1px $black;
-						height: rem-calc(13);
+						height: rem-calc(35);
 					}
-				}
-
-				&.first {
-					border-left: solid 1px $black;
-					padding-left: rem-calc(15);
 				}
 
 			}
@@ -134,14 +164,19 @@ nav {
 	}
 
 	&.opened {
+		
+		border-bottom: solid 1px $black;
+		box-shadow: 0 20px 60px $black;
+
 		.nav-content {
 
-			height: 125vh;
+			height: auto;
+			border: 0;
 
 			.menu-toggle {
 				span {
 					&:nth-of-type(1) {
-					  top: 18px;
+					  top: 15px;
 					  width: 0%;
 					  left: 50%;
 					}
@@ -161,28 +196,106 @@ nav {
 					}
 
 					&:nth-of-type(4) {
-					  top: 18px;
+					  top: 15px;
 					  width: 0%;
 					  left: 50%;
 					}
 				}
 				
 			}
+
+			
 		}
 	}
+}
+
+@include breakpoint(medium) {
+
+	nav {
+
+		&.columns {
+			padding-left: rem-calc(15);
+			padding-right: rem-calc(15);
+		}
+
+		.nav-content {
+			&.row {
+				padding: 0;
+			}
+		}
+	}
+
 }
 
 @include breakpoint(large) {
 
 	nav {
+
 		.nav-content {
-			
+
 			.menu-toggle {
 				display: none;
 			}
 
 			.nav-items {
 				display: block;
+				clear: none;
+				float: right;
+				margin-top: rem-calc(9);
+				margin-left: rem-calc(10);
+				border: 0;
+				padding-top: 0;
+
+				li {
+					display: inline-block;
+					@include oswald;
+					line-height: rem-calc(30);
+					text-align: center;
+					width: auto;
+					float: none;
+					margin-bottom: 0;
+					font-weight: 300;
+
+					a {
+						border: 0;
+						display: inline-block;
+						color: $black;
+						background-color: transparent;
+						padding-left: rem-calc(10);
+						padding-right: rem-calc(10);
+						line-height: rem-calc(32);
+						font-size: rem-calc(14);
+						cursor: pointer;
+
+						&:hover {
+							background-color: $black;
+							color: #fff;
+						}
+					}
+
+					&.theme {
+
+						padding-left: rem-calc(3);
+						padding-right: rem-calc(3);
+
+						a {
+							padding: 0;
+							width: rem-calc(13);
+							border: solid 1px $black;
+							height: rem-calc(13);
+						}
+					}
+
+					&.first {
+						border-left: solid 1px $black;
+						padding-left: rem-calc(15);
+					}
+
+					&.theme-title {
+						display: none;
+					}
+
+				}
 			}
 		}
 

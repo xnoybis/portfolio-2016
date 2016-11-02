@@ -20,14 +20,7 @@
 	<div class="loader">
 		<div class="pane-left"><div class="split-line"></div></div>
 		<div class="pane-right"></div>		
-		<div class="holder">
-			<div class="wrap">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+		<div class="holder"><div class="wrap"><span></span><span></span><span></span><span></span><span></span></div>
 		</div>
 	</div>
 
@@ -36,16 +29,17 @@
 		<nav class="columns">
 			<div class="nav-content row">
 				<a class="logo" title="Evident Agenda" href="#home"></a>
+				<a class="menu-toggle"><span></span><span></span><span></span><span></span></a>
 				<ul class="nav-items">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#profile">Profile</a></li>
 					<li><a href="#projects">Projects</a></li>
 					<li><a href="#contact">Contact</a></li>
+					<li class="theme-title">Choose theme:</li>
 					<li class="theme first"><a class="theme-default"></a></li>
 					<li class="theme"><a class="theme-black"></a></li>
 					<li class="theme"><a class="theme-gray"></a></li>
 				</ul>
-				<a class="menu-toggle"><span></span><span></span><span></span><span></span></a>
 			</div>
 		</nav>
 

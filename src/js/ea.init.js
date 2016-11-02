@@ -3,6 +3,7 @@
 var currentScroll = 0, 
 	winH = 0, 
 	winW = 0, 
+	navH = 0,
 	genPadding = 0, 
 	particlesEnabled = false, 
 	isMedium = false, 
