@@ -64,31 +64,4 @@ function processDom() {
 		$(this).html("<span class='wrap'><span class='corner'></span><span><span>"+$(this).html()+"</span></span></span>");
 	});
 
-	//createPixelBorders();
-
-}
-
-function createPixelBorders() {
-
-	var pixelArray = [
-		["f", "f bt", "f bt", "f rt", "bt tp rt lf", "f lf bt rt", "tp lf", "tp rt", "f lf bt", "f", "f", "f bt rt", "lf bt rt tp", "f lf", "f bt rt", "tp lf", "tp rt", "f bt lf", "f", "f bt", "f", "f", "f", "f"],
-		["f rt", "tp lf", "tp rt", "f lf bt", "f rt tp bt", "tp lf", "", "", "tp rt", "f lf bt", "f rt", "lf tp rt bt", "f bt tp lf", "f bt rt", "tp lf", "", "", "tp rt", "f bt lf rt", "tp lf rt", "f bt lf", "f", "f", "f bt"],
-		["f bt rt", "lf", "", "tp", "tp", "", "", "", "rt", "f lf bt", "f bt", "f tp bt rt", "tp lf", "", "", "", "f bt lf tp rt", "lf", "tp", "", "tp rt", "f lf bt", "f bt", "tp lf"]
-	];
-
-	var pixelStr = "";
-	for (var i=0;i<pixelArray.length;i++) {
-
-		pixelStr += "<div class='pixelrow'>";
-		for (var p=0;p<pixelArray[i].length;p++) {
-			pixelStr += "<span class='"+pixelArray[i][p]+"'></span>";
-		}
-		pixelStr += "</div>";
-	}
-
-	$(".projects").prepend("<div class='pixels'>"+pixelStr+"</div>");
-	$(".profile").prepend("<div class='pixels'>"+pixelStr+"</div>");
-
-	resize();
-
 }
