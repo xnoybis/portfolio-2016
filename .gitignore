@@ -2,6 +2,8 @@ node_modules/
 bower_components/
 .sass-cache/
 src/scss/foundation/
+!/src/scss/foundation/settings/
 src/js/vendors/
 dist/css/
 dist/js/
+

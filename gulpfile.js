@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var order = require('gulp-order');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
@@ -23,6 +24,10 @@ var paths = {
 gulp.task('process-vendors-js', function () {  
 	return gulp.src(paths.jsSrc+"/vendors/*.js")
 		.pipe(srcmaps.init())
+		.pipe(order([
+    		paths.jsSrc+"/vendors/jquery.min.js",
+    		paths.jsSrc+"/vendors/**/*.js"
+    	], { base: './' }))
 		.pipe(concat('vendors.js'))
 		.pipe(uglify())
 		.pipe(srcmaps.write('.'))
