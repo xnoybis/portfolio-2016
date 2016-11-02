@@ -14,10 +14,6 @@ nav {
 		background-color: #fff;
 		height: $nav-height;
 		border-bottom: solid 1px $black;
-		-webkit-transition: .25s ease-in-out;
-		-moz-transition: .25s ease-in-out;
-		-o-transition: .25s ease-in-out;
-		transition: .25s ease-in-out;
 		overflow: hidden;
 		padding-left: rem-calc(10);
 		padding-right: rem-calc(10);
@@ -94,6 +90,9 @@ nav {
 			clear: both;
 			padding-top: rem-calc(10);
 			border-top: solid 1px $black;
+			@include clearfix;
+			width: 100%;
+			max-width: 100%;
 			
 
 			li {
@@ -119,10 +118,6 @@ nav {
 					cursor: pointer;
 					background-color: $black;
 
-					&:hover {
-						background-color: #fff;
-						color: $black;
-					}
 				}
 
 				&:nth-of-type(odd) {
@@ -231,6 +226,8 @@ nav {
 
 	nav {
 
+		@include acceleration;
+
 		.nav-content {
 
 			.menu-toggle {
@@ -245,6 +242,7 @@ nav {
 				margin-left: rem-calc(10);
 				border: 0;
 				padding-top: 0;
+				width: auto;
 
 				li {
 					display: inline-block;

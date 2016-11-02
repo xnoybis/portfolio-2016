@@ -11,17 +11,10 @@ body {
 	padding: 0;
 }
 
-.works-list a, .brands-list li, nav {
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	perspective: 1000;
-
-	-webkit-font-smoothing: antialiased;
+.works-list a, .brands-list li {
+	
+	@include acceleration;
+	
 }
 
 ::selection {
