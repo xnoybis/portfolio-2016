@@ -40,7 +40,7 @@ function resize() {
 		// adjusting section header width
 
 		$(this).find("header .holder").css("width", "");
-		$(this).find("header .holder").css("width", $(this).find("header h1").textWidth());
+		$(this).find("header .holder").css("width", $(this).find("header h1").textWidth()+6);
 
 		// positioning header text
 
