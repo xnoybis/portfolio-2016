@@ -17,6 +17,7 @@ nav {
 		overflow: hidden;
 		padding-left: rem-calc(10);
 		padding-right: rem-calc(10);
+		text-align: center;
 		@include clearfix;
 
 		.logo {
@@ -88,8 +89,10 @@ nav {
 			text-align: left;
 			float: none;
 			clear: both;
-			padding-top: rem-calc(10);
+			padding-top: 1px;
+			padding-bottom: 1px;
 			border-top: solid 1px $black;
+			border-bottom: solid 1px $black;
 			@include clearfix;
 			width: 100%;
 			max-width: 100%;
@@ -99,9 +102,8 @@ nav {
 				@include oswald;
 				display: block;
 				line-height: rem-calc(30);
-				width: 50%;
+				width: 25%;
 				float: left;
-				margin-bottom: rem-calc(10);
 				font-weight: 700;
 				text-align: center;
 				text-transform: uppercase;					
@@ -114,19 +116,16 @@ nav {
 					padding-left: rem-calc(10);
 					padding-right: rem-calc(10);
 					line-height: rem-calc(60);
-					font-size: rem-calc(20);
+					font-size: rem-calc(12);
 					cursor: pointer;
 					background-color: $black;
 
 				}
 
-				&:nth-of-type(odd) {
-					padding-right: rem-calc(5);
+				&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
+					padding-right: rem-calc(1);
 				}
 
-				&:nth-of-type(even) {
-					padding-left: rem-calc(5);
-				}
 
 				&.theme-title {
 					@include muli;
@@ -154,6 +153,61 @@ nav {
 				}
 
 			}
+		}
+
+		.nav-theme {
+
+			display: inline-block;
+			float: none;
+			list-style-type: none;
+			margin: auto;
+			padding: 0;
+			width: 100%;
+			@include clearfix;
+
+			li {
+
+				display: inline-block;
+				float: none;
+				width: auto;
+				text-align: center;
+				width: 100%;
+				height: rem-calc(35);
+
+				a {
+					display: inline-block;
+					padding-top: 0;
+					width: auto;
+					text-align: center;
+					cursor: pointer;
+					height: rem-calc(35);
+					line-height: rem-calc(35);
+
+					i, i:before {
+						display: inline-block;
+						font-size: rem-calc(12);
+						line-height: rem-calc(37);
+						height: rem-calc(35);
+						float: left;
+						
+					}
+
+					span {
+						display: inline-block;
+						margin: 0;
+						float: left;
+						text-decoration: underline;
+						font-size: rem-calc(11);
+						text-transform: lowercase;
+						text-align: left;
+						margin-left: rem-calc(5);
+					}
+
+				}
+
+			}
+			
+
 		}
 		
 	}
@@ -217,6 +271,14 @@ nav {
 			&.row {
 				padding: 0;
 			}
+
+			.nav-items {
+				li {
+					a {
+						font-size: rem-calc(18);
+					}
+				}
+			}
 		}
 	}
 
@@ -234,10 +296,15 @@ nav {
 				display: none;
 			}
 
-			.nav-items {
-				display: block;
-				clear: none;
+			.nav-wrap {
 				float: right;
+				width: auto;
+			}
+
+			.nav-items {
+				display: inline-block;
+				clear: none;
+				float: left;
 				margin-top: rem-calc(9);
 				margin-left: rem-calc(10);
 				border: 0;
@@ -245,14 +312,22 @@ nav {
 				width: auto;
 
 				li {
-					display: inline-block;
+					display: block;
 					@include oswald;
 					line-height: rem-calc(30);
 					text-align: center;
 					width: auto;
-					float: none;
+					float: left;
 					margin-bottom: 0;
 					font-weight: 300;
+
+					&:nth-of-type(odd) {
+						padding-right: 0;
+					}
+
+					&:nth-of-type(even) {
+						padding-left: 0;
+					}
 
 					a {
 						border: 0;
@@ -271,30 +346,60 @@ nav {
 						}
 					}
 
-					&.theme {
+				}
 
-						padding-left: rem-calc(3);
-						padding-right: rem-calc(3);
+			}
 
-						a {
-							padding: 0;
-							width: rem-calc(13);
-							border: solid 1px $black;
-							height: rem-calc(13);
+			.nav-theme {
+				
+				display: block;
+				float: left;
+				margin: 0;
+				padding: 0;
+				max-width: auto;
+				clear: none;
+				width: auto;
+				margin-top: rem-calc(10);				
+				padding-left: rem-calc(5);
+				border-left: solid 1px $black;
+
+				li {
+
+					display: block;
+					width: rem-calc(30);
+					height: rem-calc(30);
+					padding: 0;
+					height: rem-calc(30);
+
+					a {
+						display: inline-block;
+						padding: rem-calc(4);
+						padding-top: 0;
+						width: 100%;
+						text-align: center;
+						height: rem-calc(30);
+						line-height: rem-calc(30);
+
+						i, i:before {
+							display: inline-block;
+							float: none;
+							text-align: center;
+							width: 100%;
+							line-height: rem-calc(30);
 						}
+
+						span {
+							display: none;
+						}
+
 					}
 
-					&.first {
-						border-left: solid 1px $black;
-						padding-left: rem-calc(15);
-					}
-
-					&.theme-title {
-						display: none;
-					}
 
 				}
+				
+
 			}
+			
 		}
 
 		&.opened {

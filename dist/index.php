@@ -30,16 +30,17 @@
 			<div class="nav-content row">
 				<a class="logo" title="Evident Agenda" href="#home"></a>
 				<a class="menu-toggle"><span></span><span></span><span></span><span></span></a>
-				<ul class="nav-items">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#profile">Profile</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li class="theme-title">Choose theme:</li>
-					<li class="theme first"><a class="theme-default"></a></li>
-					<li class="theme"><a class="theme-black"></a></li>
-					<li class="theme"><a class="theme-gray"></a></li>
-				</ul>
+				<div class="nav-wrap">
+					<ul class="nav-items">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#profile">Profile</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+					<ul class="nav-theme">
+						<li class="theme-title"><a class="theme-switch"><i class="icon-arrows-cw"></i><span>Switch theme</span></a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 
@@ -263,7 +264,7 @@
 					<div class="contact-row social">
 
 						<div class="columns small-24 large-8"><a href="https://www.linkedin.com/in/lukaszjakimowicz" target="_blank"><i class="icon-linkedin"></i> linkedin</a></div>
-						<div class="columns small-24 large-8"><a href="https://github.com/xnoybis" target="_blank"><i class="icon-github"></i> github</a></div>
+						<div class="columns small-24 large-8"><a href="https://github.com/xnoybis" target="_blank"><i class="icon-github-circled"></i> github</a></div>
 						<div class="columns small-24 large-8"><a href="http://stackoverflow.com/story/evidentagenda" target="_blank"><i class="icon-stackoverflow"></i> stack overflow</a></div>
 
 					</div>

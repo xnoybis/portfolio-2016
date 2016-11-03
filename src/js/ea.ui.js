@@ -183,7 +183,7 @@ function enableInteractions() {
 		$("nav").toggleClass("opened");
 	});
 
-	$(".nav-items a").on("click", function(e) {
+	$(".nav-items a, nav .logo").on("click", function(e) {
 		e.preventDefault();
 		if ($(this).parent().hasClass("theme")) {
 
