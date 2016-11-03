@@ -4,11 +4,11 @@
 	padding-top: $nav-height;
 	min-height: 100%;
 	overflow: hidden;
-}
 
-.wrap {
-	position: relative;
-	overflow: hidden;
+	& > .wrap {
+		position: relative;
+		overflow: hidden;
+	}
 }
 
 .debug {

@@ -18,10 +18,9 @@
 <body>
 
 	<div class="loader">
-		<div class="pane-left"><div class="split-line"></div></div>
-		<div class="pane-right"></div>		
-		<div class="holder"><div class="wrap"><span></span><span></span><span></span><span></span><span></span></div>
-		</div>
+		<div class="pane-up"><div class="split-line"></div></div>
+		<div class="pane-down"></div>		
+		<div class="holder"><div class="wrap"><span></span><span></span><span></span><span></span><span></span></div></div>
 	</div>
 
 	<div class="site">
@@ -38,7 +37,7 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 					<ul class="nav-theme">
-						<li class="theme-title"><a class="theme-switch"><i class="icon-arrows-cw"></i><span>Switch theme</span></a></li>
+						<li class="theme-title"><a class="theme-switch" title="Switch theme"><i class="icon-arrows-cw"></i><span>Switch theme</span></a></li>
 					</ul>
 				</div>
 			</div>
