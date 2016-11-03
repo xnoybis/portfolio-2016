@@ -204,9 +204,11 @@ nav {
 						display: inline-block;
 						font-size: rem-calc(12);
 						line-height: rem-calc(37);
-						height: rem-calc(35);
-						float: left;
-						
+						float: left;						
+					}
+					i:before {
+						padding-top: rem-calc(12);
+						line-height: 1;
 					}
 
 					span {
@@ -429,6 +431,7 @@ nav {
 							text-align: center;
 							width: 100%;
 							line-height: rem-calc(30);
+							padding: 0;
 						}
 
 						span {

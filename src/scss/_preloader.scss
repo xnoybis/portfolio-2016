@@ -124,22 +124,29 @@
 	text-align: center;
 	display: table;
 	overflow: hidden;
-	display: none;
 
 	.pane-up, .pane-down, .split-line {
-		background-color: $black;
+		background-color: $secondary;
 		width: 100%;
 		height: calc(50% + 2px);
 		position: absolute;
 		top: -1px;
 		left: 0;
 		z-index: 9997;
+
+		.themed & {
+			background-color: $alt-aux;
+		}
 	}
 	.pane-down {
 		top: auto;
 		bottom: -1px;
-		border-top: solid 1px #fff;
+		border-top: solid 1px $primary;
 		z-index: 9996;
+
+		.themed & {
+			border-top: solid 1px $alt-secondary;
+		}		
 	}
 
 	.split-line {
@@ -148,8 +155,12 @@
 		height: 100%;
 		max-width: 0px;
 		overflow: hidden;
-		border-bottom: solid 1px #fff;
+		border-bottom: solid 1px $primary;
 		left: 0;
+
+		.themed & {
+			border-bottom: solid 1px $alt-secondary;
+		}
 	}
 
 	.holder {
@@ -164,11 +175,15 @@
 			display: block;
 			width: 14px;
 			height: 14px;
-			background-color: #fff;
+			background-color: $primary;
 			margin-top: 3px;
 			margin-bottom: 3px;
 			-webkit-animation: preloader 1.5s infinite;
 			animation: preloader 1.5s infinite;
+
+			.themed & {
+				background-color: $alt-secondary;
+			}
 
 			&:nth-of-type(5n+1) {
 				-webkit-animation-delay: $preloader-rotation-delay + ms;

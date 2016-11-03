@@ -768,10 +768,10 @@
 
 						&:hover {
 							border: solid rem-calc(10) $primary;
+						}
 
-							.themed & {
-								border: solid rem-calc(10) $alt-primary;
-							}
+						.themed &:hover {
+							border: solid rem-calc(10) $alt-primary;
 						}
 					}
 				}

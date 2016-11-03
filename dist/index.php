@@ -37,7 +37,7 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 					<ul class="nav-theme">
-						<li class="theme-title"><a class="theme-switch" title="Switch theme"><i class="icon-arrows-cw"></i><span>Switch theme</span></a></li>
+						<li class="theme-title"><a class="theme-switch" title="Switch theme"><i class="icon-color-adjust"></i><span>Switch theme</span></a></li>
 					</ul>
 				</div>
 			</div>

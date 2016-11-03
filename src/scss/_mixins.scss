@@ -8,6 +8,15 @@
 	filter: gray;	
 }
 
+@mixin no-grayscale {
+	filter: none;
+	-webkit-filter: none;
+	-moz-filter: none;   
+	-ms-filter: none;
+	-o-filter: none;
+	
+}
+
 @mixin oswald {
 	font-family: 'Oswald', sans-serif;
 }

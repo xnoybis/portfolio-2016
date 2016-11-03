@@ -668,7 +668,7 @@
 					@include grayscale;
 
 					.themed & {
-						filter: none;
+						@include no-grayscale;
 					}
 
 					h3 {

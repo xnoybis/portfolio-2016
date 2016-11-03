@@ -49,7 +49,7 @@ gulp.task('process-site-js', function () {
 gulp.task('compile-foundation-sass', function () {  
   return gulp.src(paths.cssSrc+"/foundation.scss")
   	.pipe(srcmaps.init())
-    .pipe(sass({ includePaths: sassPaths }))    
+    .pipe(sass({ includePaths: sassPaths, outputStyle:'compressed' }))
     .pipe(concat('foundation.css'))
     .pipe(srcmaps.write('.'))
     .pipe(gulp.dest(paths.cssDist));
@@ -58,7 +58,7 @@ gulp.task('compile-foundation-sass', function () {
 gulp.task('compile-site-sass', function () {  
   return gulp.src(paths.cssSrc+"/main.scss")
   	.pipe(srcmaps.init())
-    .pipe(sass({ includePaths: sassPaths }))
+    .pipe(sass({ includePaths: sassPaths, outputStyle:'compressed' }))
     .pipe(concat('style.css'))
     .pipe(srcmaps.write('.'))
     .pipe(gulp.dest(paths.cssDist));
