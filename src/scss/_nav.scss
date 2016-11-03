@@ -3,22 +3,31 @@ nav {
 	position: fixed;
 	top: 0;
 	z-index: 9000;
-	border-bottom: solid 1px #fff;
+	border-bottom: solid 1px $primary;
 	left: 0;
+
+	.themed & {
+		border-bottom: solid 1px $alt-primary;
+	}
 
 	&.columns {
 		padding: 0;
 	}
 
 	.nav-content {
-		background-color: #fff;
+		background-color: $primary;
 		height: $nav-height;
-		border-bottom: solid 1px $black;
+		border-bottom: solid 1px $border;
 		overflow: hidden;
 		padding-left: rem-calc(10);
 		padding-right: rem-calc(10);
 		text-align: center;
 		@include clearfix;
+
+		.themed & {
+			background-color: $alt-primary;
+			border-bottom: solid 1px $alt-border;
+		}
 
 		.logo {
 			display: block;
@@ -29,6 +38,10 @@ nav {
 			width: 150px;
 			height: 50px;
 			float: left;
+
+			.themed & {
+				background-position: -150px center;
+			}
 		}
 
 		.menu-toggle {
@@ -45,15 +58,19 @@ nav {
 			-o-transition: .5s ease-in-out;
 			transition: .5s ease-in-out;
 			cursor: pointer;
-			background-color: $black;
 			margin-top: rem-calc(8);
+			background-color: $aux;
+
+			.themed & {
+				background-color: $alt-aux;
+			}
 
 			span {
 				display: block;
 				position: absolute;
 				height: rem-calc(5);
 				width: 70%;
-				background: #fff;
+				background: $primary;
 				opacity: 1;
 				left: 0;
 				left: 15%;
@@ -65,6 +82,10 @@ nav {
 				-moz-transition: .25s ease-in-out;
 				-o-transition: .25s ease-in-out;
 				transition: .25s ease-in-out;
+
+				.themed & {
+					background: $alt-secondary;
+				}
 
 				&:nth-of-type(1) {
 				  top: 7px;
@@ -91,11 +112,16 @@ nav {
 			clear: both;
 			padding-top: 1px;
 			padding-bottom: 1px;
-			border-top: solid 1px $black;
-			border-bottom: solid 1px $black;
+			border-top: solid 1px $border;
+			border-bottom: solid 1px $border;
 			@include clearfix;
 			width: 100%;
 			max-width: 100%;
+
+			.themed & {
+				border-top: solid 1px $alt-border;
+				border-bottom: solid 1px $alt-border;
+			}
 			
 
 			li {
@@ -112,13 +138,18 @@ nav {
 					display: block;
 					text-decoration: none;
 					width: 100%;
-					color: #fff;
+					color: $primary;
 					padding-left: rem-calc(10);
 					padding-right: rem-calc(10);
 					line-height: rem-calc(60);
 					font-size: rem-calc(12);
 					cursor: pointer;
-					background-color: $black;
+					background-color: $aux;
+
+					.themed & {
+						color: $alt-secondary;
+						background-color: $alt-aux;
+					}
 
 				}
 
@@ -136,20 +167,6 @@ nav {
 					text-align: left;
 					margin: 0;
 					text-transform: none;
-				}
-
-				&.theme {
-
-					width: auto;
-					padding: 0;
-					padding-right: rem-calc(10);
-
-					a {
-						padding: 0;
-						width: rem-calc(35);
-						border: solid 1px $black;
-						height: rem-calc(35);
-					}
 				}
 
 			}
@@ -214,8 +231,13 @@ nav {
 
 	&.opened {
 		
-		border-bottom: solid 1px $black;
-		box-shadow: 0 20px 60px $black;
+		border-bottom: solid 1px $border;
+		box-shadow: 0 20px 60px $border;
+
+		.themed & {
+			border-bottom: solid 1px $alt-border;
+			box-shadow: 0 20px 60px $alt-border;
+		}
 
 		.nav-content {
 
@@ -262,14 +284,11 @@ nav {
 
 	nav {
 
-		&.columns {
-			padding-left: rem-calc(15);
-			padding-right: rem-calc(15);
-		}
-
 		.nav-content {
+
 			&.row {
-				padding: 0;
+				padding-left: rem-calc(15);
+				padding-right: rem-calc(15);
 			}
 
 			.nav-items {
@@ -288,9 +307,19 @@ nav {
 
 	nav {
 
+		&.columns {
+			padding-left: rem-calc(15);
+			padding-right: rem-calc(15);
+		}
+
 		@include acceleration;
 
 		.nav-content {
+
+			&.row {
+				padding: 0;
+			}			
+
 
 			.menu-toggle {
 				display: none;
@@ -310,6 +339,10 @@ nav {
 				border: 0;
 				padding-top: 0;
 				width: auto;
+
+				.themed & {
+					border: 0;
+				}
 
 				li {
 					display: block;
@@ -332,17 +365,28 @@ nav {
 					a {
 						border: 0;
 						display: inline-block;
-						color: $black;
 						background-color: transparent;
 						padding-left: rem-calc(10);
 						padding-right: rem-calc(10);
 						line-height: rem-calc(32);
 						font-size: rem-calc(14);
 						cursor: pointer;
+						color: $secondary;
+
+						.themed & {
+							color: $alt-secondary;
+							background-color: transparent;
+
+						}
 
 						&:hover {
-							background-color: $black;
-							color: #fff;
+							background-color: $aux;
+							color: $primary;
+
+							.themed & {
+								background-color: $alt-aux;
+								color: $alt-secondary;
+							}
 						}
 					}
 
@@ -361,7 +405,6 @@ nav {
 				width: auto;
 				margin-top: rem-calc(10);				
 				padding-left: rem-calc(5);
-				border-left: solid 1px $black;
 
 				li {
 

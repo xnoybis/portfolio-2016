@@ -201,6 +201,11 @@ function enableInteractions() {
 		}
 	});
 
+	$(".theme-switch").on("click", function(e) {
+		e.preventDefault();
+		$("body").toggleClass("themed");
+	});
+
 }
 
 function updatePosition(force) {

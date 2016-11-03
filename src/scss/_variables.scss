@@ -2,6 +2,7 @@
 
 $black:		#020202;
 $gray:		#a2a2a2;
+$whitish:	#f0f0f0;
 
 // animation 
 
@@ -11,3 +12,23 @@ $preloader-drop-delay: 40;
 // nav
 
 $nav-height: rem-calc(50);
+
+////////////////////////////////////////////////////////
+// themes
+////////////////////////////////////////////////////////
+
+// default
+
+$primary: 					#fff;
+$secondary:					#020202;
+$aux:						#020202;
+$border:					#020202;
+$shadow-alpha:				0 1px 1px rgba(255,255,255,0.3), -1px 1px 1px rgba(255,255,255,0.3);
+
+// themed
+
+$alt-primary:	 			#e75b4c;
+$alt-secondary:	 			#f0f0f0;
+$alt-aux:					#b9493d;
+$alt-border:				#89362d;
+$alt-shadow-alpha:			0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);

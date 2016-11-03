@@ -13,20 +13,29 @@
 				a {
 					@include oswald;
 					display: block;
-					border: solid 1px $black;
 					padding: rem-calc(10);
-					color: $black;
+					color: $secondary;
 					text-decoration: none;
 					line-height: rem-calc(48);
 					text-transform: uppercase;
 					font-size: rem-calc(20);
+					border: solid 1px $border;
+
+					.themed & {
+						color: $alt-secondary;
+						border: solid 1px $alt-border;
+					}
 
 					i {
 						display: block;
 						font-size: rem-calc(32);
-						color: $black;
+						color: $secondary;
 						float: left;
 						margin: 0;
+
+						.themed & {
+							color: $alt-secondary;
+						}
 					}
 
 					[class^="icon-"]:before, [class*=" icon-"]:before {
@@ -41,11 +50,20 @@
 
 				& > div {
 					a {
-						background-color: $black;
-						color: #fff;
+						background-color: $secondary;
+						color: $primary;
+
+						.themed & {
+							background-color: $alt-aux;
+							color: $alt-secondary;
+						}
 
 						i {
-							color: #fff;
+							color: $primary;
+
+							.themed & {
+								color: $alt-secondary;
+							}
 						}
 					}
 				}

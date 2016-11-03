@@ -11,16 +11,12 @@
 	}
 }
 
-.debug {
-	position: fixed;
-	display: block;
-	text-align: center;
-	top: 0;
-	width: 100%;
-	height: 30px;
-	background-color: #fff;
-	z-index: 5000;
-	display: none;
+body {
+	background-color: $primary;
+
+	&.themed {
+		background-color: $alt-primary;
+	}
 }
 
 .page {
@@ -39,7 +35,11 @@
 			position: relative;
 			z-index: 999;
 			overflow: hidden;
-			background-color: $black;
+			background-color: $aux;
+
+			.themed & {
+				background-color: $alt-aux;
+			}
 		}
 
 		.holder {
@@ -59,7 +59,11 @@
 			line-height: 1;
 			text-transform: uppercase;
 			width: 100%;
-			color: #fff;
+			color: $primary;
+
+			.themed & {
+				color: $alt-secondary;
+			}
 		}
 
 		h1 {
@@ -68,8 +72,6 @@
 			font-size: rem-calc(60);
 			text-align: center;
 			padding-top: rem-calc(0);
-			color: #fff;
-			
 		}
 
 		h3 {
@@ -114,66 +116,14 @@
 		div {
 			width: 0; 
 			height: 0; 
-			border-left: 600px solid #fff;
-			border-right: 600px solid #fff;
-
+			border-left: 600px solid $aux;
+			border-right: 600px solid $aux;
 			border-bottom: 120px solid transparent;
 
-		}
-	}
-
-	.pixels {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		z-index: 1000;
-
-		.pixelrow {
-
-			display: block;
-			@include clearfix;
-			position: relative;
-			clear: both;
-			top: -2px;
-
-			span {
-				display: none;
-				width: 30px;
-				height: 30px;
-				float: left;
-				margin-left: -1px;
-				position: relative;
+			.themed & {
+				border-left: 600px solid $alt-aux;
+				border-right: 600px solid $alt-aux;
 			}
-
-			span.f {
-				background-color: #fff;
-			}
-
-			span.tp {
-				border-top: solid 1px $black;
-			}
-
-			span.bt {
-				border-bottom: solid 1px $black;
-			}
-
-			span.rt {
-				border-right: solid 1px $black;
-			}
-
-			span.lf {
-				border-left: solid 1px $black;
-			}
-
-			&:first-child {
-				top: -1px;
-			}
-
-			&:last-child {
-				top: -3px;
-			}
-
 
 		}
 	}
@@ -250,7 +200,11 @@
 	
 		header {
 
-			border-bottom: solid 1px $black;
+			border-bottom: solid 1px $border;
+
+			.themed & {
+				border-bottom: solid 1px $alt-border;				
+			}
 			
 			h1 {
 				font-size: rem-calc(220);
@@ -278,8 +232,13 @@
 			top: 0;
 
 			div {
-				border-left-color: $black;
-				border-right-color: $black;	
+				border-left-color: $aux;
+				border-right-color: $aux;	
+
+				.themed & {
+					border-left-color: $alt-aux;
+					border-right-color: $alt-aux;	
+				}
 			}
 			
 		}
@@ -289,10 +248,19 @@
 	&.dark {
 		header {
 			.wrapper {
-				background-color: #fff;
+				background-color: $primary;
+
+				.themed & {
+					background-color: $alt-primary;
+				}
 			}
 			h1, h3, h4 {
-				color: $black;
+				color: $secondary;
+
+				.themed & {
+					color: $alt-secondary;					
+				}
+				
 			}
 		}
 	}

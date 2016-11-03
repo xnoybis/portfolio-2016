@@ -1,6 +1,10 @@
 .home {
 	
 	min-height: 400px;
-	background-color: $black;
+	background-color: $aux;
+
+	.themed & {
+		background-color: $alt-aux;
+	}
 
 }

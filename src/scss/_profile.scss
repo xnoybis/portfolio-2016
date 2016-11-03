@@ -5,15 +5,20 @@
 		text-transform: uppercase;
 		text-align: center;
 		
-		border: solid 1px $black;
+		border: solid 1px $border;
 		margin: 0;
 		padding: 0;
 		padding-top: rem-calc(10);
 		padding-bottom: rem-calc(10);
 		font-size: rem-calc(20);
 		line-height: 1;
-		border-top: solid rem-calc(5) $black;
+		border-top: solid rem-calc(5) $border;
 		margin-bottom: rem-calc(10);
+
+		.themed & {
+			border: solid 1px $alt-border;
+			border-top: solid rem-calc(5) $alt-border;
+		}
 	}
 
 	p {
@@ -40,13 +45,19 @@
 
 			.wrap {
 				display: block;
-				background-color: $black;
-				color: #fff;
+				background-color: $aux;
+				color: $primary;
 				text-align: center;					
-				border: solid 1px $black;
+				border: solid 1px $border;
 				font-size: rem-calc(12);
 				position: relative;
 				overflow: hidden;
+
+				.themed & {
+					background-color: $alt-aux;
+					color: $alt-secondary;
+					border: solid 1px $alt-border;
+				}
 
 				.corner {
 					width: 0px;
@@ -56,16 +67,24 @@
 					right: 0px;
 					border-width: 0;
 					border-style: solid;
-					background: $black;
-					-webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.3), -1px 1px 1px rgba(255,255,255,0.3);
-					-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-					box-shadow: 0 1px 1px rgba(255,255,255,0.3), -1px 1px 1px rgba(255,255,255,0.3);
-					border-color: #fff #fff transparent transparent;
+					background: $aux;
+					-webkit-box-shadow: $shadow-alpha;
+					-moz-box-shadow: $shadow-alpha;
+					box-shadow: $shadow-alpha;
+					border-color: $primary $primary transparent transparent;
 					-webkit-transition: border-width 0.2s ease-out;
 					-moz-transition: border-width 0.2s ease-out;
 					-ms-transition: border-width 0.2s ease-out;
 					-o-transition: border-width 0.2s ease-out;
 					transition: border-width 0.2s ease-out;
+
+					.themed & {
+						background: $alt-aux;
+						border-color: $alt-primary $alt-primary transparent transparent;
+						-webkit-box-shadow: $alt-shadow-alpha;
+						-moz-box-shadow: $alt-shadow-alpha;
+						box-shadow: $alt-shadow-alpha;
+					}
 				}
 
 				span {
@@ -84,33 +103,36 @@
 			}
 
 			
-			&.secondary {
+			&.secondary, &.tertiary {
 				.wrap {
 					background-color: transparent;
-					color: $black;
+					color: $secondary;
+
+					.themed & {
+						color: $alt-secondary;
+					}
 
 					.corner {
-						background: #fff;
-						webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-						-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-						box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-						border-color: $black $black transparent transparent;
+						background: $primary;
+						webkit-box-shadow: $alt-shadow-alpha;
+						-moz-box-shadow: $alt-shadow-alpha;
+						box-shadow: $alt-shadow-alpha;
+						border-color: $aux $aux transparent transparent;
+
+						.themed & {
+							background: $alt-primary;
+							border-color: $alt-aux $alt-aux transparent transparent;
+						}
 					}
 				}
 			}
 
 			&.tertiary {
 				.wrap {
-					background-color: transparent;
-					border: dashed 1px $black;
-					color: $black;	
+					border: dashed 1px $border;
 
-					.corner {
-						background: #fff;
-						webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-						-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-						box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-						border-color: $black $black transparent transparent;
+					.themed & {
+						border: dashed 1px $alt-border;
 					}
 				}
 				
@@ -221,12 +243,17 @@
 	}
 
 	.skill-legend {
-		border-top: solid 1px $black;
-		border-bottom: solid 1px $black;
+		border-top: solid 1px $border;
+		border-bottom: solid 1px $border;
 		padding-top: rem-calc(20);
 		padding-bottom: rem-calc(20);
 		margin-bottom: rem-calc(10);
 		text-align: center;
+
+		.themed & {
+			border-top: solid 1px $alt-border;
+			border-bottom: solid 1px $alt-border;
+		}
 
 
 		h5 {
@@ -244,21 +271,37 @@
 			li {
 				display: inline-block;
 				line-height: rem-calc(30);
-				background-color: $black;
-				color: #fff;
+				background-color: $aux;
+				color: $primary;
+				border: solid 1px $border;
 				padding-left: rem-calc(8);
 				padding-right: rem-calc(8);
 				text-align: center;
 				font-size: rem-calc(11);
 
+				.themed & {
+					background-color: $alt-aux;
+					color: $alt-secondary;
+					border: solid 1px $alt-border;
+				}
+
 				&.secondary, &.tertiary {
 					background-color: transparent;
-					border: solid 1px $black;
-					color: $black;
+					border: solid 1px $border;
+					color: $secondary;
+
+					.themed & {
+						border: solid 1px $alt-border;
+						color: $alt-secondary;
+					}
 				}
 
 				&.tertiary {
-					border: dashed 1px $black;	
+					border: dashed 1px $border;
+
+					.themed & {
+						border: dashed 1px $alt-border;						
+					}	
 				}
 			}
 		}
@@ -275,10 +318,14 @@
 			margin-bottom: rem-calc(10);
 
 			div {
-				border: solid 1px $black;
+				border: solid 1px $border;
 				display: table;
 				width: 100%;
 				overflow: hidden;
+
+				.themed & {
+					border: solid 1px $alt-border;
+				}
 
 				h5 {
 					
@@ -314,6 +361,10 @@
 			img {
 				display: block;
 				width: 100%;
+
+				.themed & {
+					opacity: 0.8;
+				}
 			}
 		}
 
@@ -346,8 +397,8 @@
 					@include oswald;
 					display: table;
 					text-align: center;
-					background-color: $black;
-					color: #fff;
+					background-color: $aux;
+					color: $primary;
 					text-decoration: none;
 					cursor: pointer;
 					text-transform: uppercase;
@@ -356,6 +407,11 @@
 					font-size: rem-calc(12);
 					height: 100%;
 					width: 100%;
+
+					.themed & {
+						background-color: $alt-aux;
+						color: $alt-secondary;
+					}
 
 					span {
 						display: table-cell;
@@ -377,8 +433,12 @@
 
 		h2 {
 			font-size: rem-calc(24);
-			border-top: solid rem-calc(6) $black;
+			border-top: solid rem-calc(6) $border;
 			margin-bottom: rem-calc(15);
+
+			.themed & {
+				border-top: solid rem-calc(6) $alt-border;
+			}
 		}
 
 		.skillset {
@@ -556,10 +616,16 @@
 		h2 {
 			padding-top: rem-calc(30);
 			padding-bottom: rem-calc(30);
-			background-color: $black;
+			background-color: $secondary;
+			color: $primary;
 			border: 0;
-			color: #fff;
 			margin-bottom: rem-calc(6);
+
+			.themed & {
+				border: 0;
+				background-color: $alt-aux;
+				color: $alt-secondary;
+			}
 		}
 
 		.skills, .brands, .todo {
@@ -701,7 +767,11 @@
 						}
 
 						&:hover {
-							border: solid rem-calc(10) #fff;
+							border: solid rem-calc(10) $primary;
+
+							.themed & {
+								border: solid rem-calc(10) $alt-primary;
+							}
 						}
 					}
 				}
@@ -721,6 +791,14 @@
 	.profile {
 
 		padding-bottom: 0;
+
+		h2 {
+			border: 0;
+
+			.themed & {
+				border: 0;
+			}
+		}
 
 		.skills {
 			
@@ -745,8 +823,13 @@
 
 		.brands {
 			margin-top: rem-calc(15);
-			background-color: $black;
+			background-color: $aux;
 			height: rem-calc(600);
+
+			.themed & {
+				background-color: $alt-aux;
+			}
+
 		}
 
 		.skillset {
