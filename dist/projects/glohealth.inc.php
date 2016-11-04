@@ -1,12 +1,16 @@
-<div class="project glohealth" data-layout="1" data-image1="glohealth1.jpg" data-image2="glohealth2.jpg" data-image3="glohealth3.jpg" data-image4="glohealth4.jpg">
+<div class="project glohealth" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
 
 	<div class="project-images">
-		<div class="image main-img"><div><img src="img/glo1.jpg"/></div></div>
-		<div class="image right-img"><div><img src="img/glo3.jpg"/></div></div>
-		<div class="image left-img"><div><img src="img/glo4.jpg"/></div></div>
-		<div class="image end-img"><div><img src="img/glo2.jpg"/></div></div>
+
+		<div class="main-image">
+			<span></span>
+		</div>
 		
-		
+		<ul class="image-list">
+			<li><span></span><div></div></li>
+			<li><span></span><div></div></li>
+			<li><span></span><div></div></li>
+		</ul>
 
 	</div>
 
@@ -26,7 +30,8 @@
 		</div>
 
 		<div class="project-description">
-			<p>Raleway is an elegant sans-serif typeface family intended for headings and other large size usage. Initially designed by Matt McInerney as a single thin weight, it was expanded into a 9 weight family by Pablo Impallari and Rodrigo Fuenzalida in 2012 and iKerned by Igino Marini. Raleway is an elegant sans-serif typeface family intended for headings and other large size usage. Initially designed by Matt McInerney as a single thin weight, it was expanded into a 9 weight family by Pablo Impallari and Rodrigo Fuenzalida in 2012.</p>
+
+			<p>Raleway is an elegant sans-serif typeface family intended for headings and other large size usage. Initially designed by Matt McInerney as a single thin weight, it was expanded into a 9 weight family by Pablo Impallari and Rodrigo Fuenzalida in 2012 and iKerned by Igino Marini. </p>
 
 			<ul class="awards">
 				<li>This and this and that award</li>

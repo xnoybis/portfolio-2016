@@ -109,11 +109,12 @@ function resize() {
 		$(".main-img, .end-img, .left-img, .right-img").find("div").css("height", $(".right-img").find("div").outerHeight(false));
 	}
 
+	/*
 	if (isXlarge) {
 		$(".project-info").css("height", $(".project-images").outerHeight(false));
 	} else {
 		$(".project-info").css("height", "");
-	}
+	}*/
 
 	// skillset
 

@@ -453,53 +453,34 @@
 			margin-top: rem-calc(10);
 			@include clearfix;
 
-			.image {
-
-				float: left;
-				overflow: hidden;
-
-
-				div {
-					overflow: hidden;	
-					border: solid 1px $border;
-
-					.themed & {
-						border: solid 1px $alt-border;
-					}
-				}
+			.main-image {
 
 				img {
 					display: block;
 					width: 100%;
+					border: solid 1px $aux;
+					margin-bottom: rem-calc(10);
+
+					.themed & {
+						border-color: $alt-aux;
+					}
+				}
+
+				span {
+					display: none;
 				}
 
 			}
 
-			.main-img {
-				clear: both;
-				width: 100%;
+			.image-list {
+				display: none;
+				background-color: $aux;
+				margin: 0;
+				padding: 0;
 
-				img {
-					display: block;
-					height: 100%;
+				.themed & {
+					background-color: $alt-aux;
 				}
-			}
-
-			.left-img {
-				padding-left: rem-calc(5);
-				width: 50%;
-				margin-top: rem-calc(10);
-			}
-
-			.end-img {
-				width: 100%;
-				margin-top: rem-calc(10);
-			}
-
-			.right-img {
-				width: 50%;
-				padding-right: rem-calc(5);
-				margin-top: rem-calc(10);
 			}
 
 		}
@@ -510,14 +491,13 @@
 			height: 100%;
 
 			color: $primary;
-			background-color: $secondary;
+			background-color: $aux;
 			border: solid 1px $border;
-			margin-top: rem-calc(10);
 
 			.themed & {
 				color: $alt-secondary;
 				background-color: $alt-aux;
-				border: solid 1px $alt-border;
+				border: solid 1px $alt-aux;
 			}
 
 			.stamps {
@@ -724,10 +704,9 @@
 	}
 
 	.project-wrapper {
-		padding: rem-calc(15);
 
-		.projects-inner {
-			padding: rem-calc(15);
+		.project-details {
+			max-width: rem-calc(640);
 		}
 
 		.project {
@@ -735,43 +714,10 @@
 			.project-images {
 				width: 100%;
 				height: 100%;
-				margin-top: rem-calc(15);
-				
-				.main-img {
-					clear: both;
-					width: 73.5%;
-
-					img {
-						display: block;
-						height: 100%;
-					}
-				}
-
-				.left-img {
-					padding-right: rem-calc(15);
-					padding-left: 0;
-					width: 26.5%;
-					clear: left;
-					margin-top: rem-calc(15);
-				}
-
-				.end-img {
-					width: 73.5%;
-					margin-top: rem-calc(15);
-				}
-
-				.right-img {
-					margin-top: 0;
-					padding-left: rem-calc(15);
-					width: 26.5%;
-					padding-right: 0;
-				}
-
 			}
 
 			.project-info {
 				width: 100%;
-				margin-top: rem-calc(15);
 
 				.project-description {
 					padding: rem-calc(15);
@@ -1154,7 +1100,6 @@
 
 		}
 	}
-	
 
 }
 
@@ -1231,88 +1176,181 @@
 
 		.project-details {
 			position: relative;
+			max-width: rem-calc(960);
 		}
 		
 		.project {
 
+			height: rem-calc(500);
+
 			.project-images {
-				width: 68%;
+				width: rem-calc(640);
 				float: left;
-				padding-right: rem-calc(15);
 				margin-top: 0;
 
-				.image {
+				.main-image {
+					width: rem-calc(640);
+					height: rem-calc(400);
+					position: relative;
+					border: solid 1px $aux;
+					border-right: 0;
+					overflow: hidden;
 
-					float: left;
 
 
-					div {
-						overflow: hidden;	
+					.themed & {
+						border: solid 1px $alt-aux;
 					}
 
-					img {
+					span {
 						display: block;
+						position: absolute;
+						z-index: 3005;
+						background-color: $aux;
 						width: 100%;
+						height: 100%;
+						opacity: 1;
+						-webkit-transition: all 0ms ease-out;
+						-moz-transition: all 0ms ease-out;
+						-ms-transition: all 0ms ease-out;
+						-o-transition: all 0ms ease-out;
+						transition: all 0ms ease-out;
+
+						.themed & {
+							background-color: $alt-aux;
+						}
+
+						&.loaded {
+							-webkit-transition: all 400ms ease-out;
+							-moz-transition: all 400ms ease-out;
+							-ms-transition: all 400ms ease-out;
+							-o-transition: all 400ms ease-out;
+							transition: all 400ms ease-out;
+							opacity: 0;
+						}
 					}
-
-				}
-
-				.main-img {
-					clear: both;
-					width: 73.5%;
 
 					img {
-						display: block;
 						height: 100%;
+						position: absolute;
+						margin: 0;
+						top: 0;
+						left: 0;
+						border: 0;
+						width: 640px;
+						height: 400px;
+						z-index: 3000;
+
+					}
+
+					img:nth-of-type(1) {
+						z-index: 3001;
 					}
 				}
 
-				.left-img {
-					padding-right: rem-calc(15);
-					padding-left: 0;
-					width: 26.5%;
-					clear: left;
-					margin-top: rem-calc(15);
-				}
+				.image-list {
+					display: block;
+					background-color: $secondary;
+					margin: 0;
+					padding: 0;
+					height: rem-calc(100);
+					text-align: center;
 
-				.end-img {
-					width: 73.5%;
-					margin-top: rem-calc(15);
-				}
+					.themed & {
+						background-color: $alt-aux;
+					}
 
-				.right-img {
-					margin-top: 0;
-					padding-left: rem-calc(15);
-					width: 26.5%;
-					padding-right: 0;
-				}
+					li {
+						display: inline-block;
+						margin-left: rem-calc(5);
+						margin-right: rem-calc(5);
+						margin-top: rem-calc(30);
+						border: solid 1px $aux;
 
+						-webkit-transition: all 0ms ease-out;
+						-moz-transition: all 0ms ease-out;
+						-ms-transition: all 0ms ease-out;
+						-o-transition: all 0ms ease-out;
+						transition: all 0ms ease-out;
+
+						opacity: 0;
+
+						.themed & {
+							border: solid 1px $alt-aux;
+						}
+
+						a {
+
+							display: block;
+							width: rem-calc(60);
+							height: rem-calc(35);
+							overflow: hidden;
+
+							border: solid 1px $secondary;
+
+							.themed & {
+								border: solid 1px $alt-aux;
+							}
+							
+						}
+
+						img {
+							display: block;
+							height: 100%;
+							min-width: 100%;
+							opacity: 0.6;
+						}
+
+						&.active {
+							border: solid 1px $primary;
+
+							img {
+								opacity: 1;
+							}
+						}
+
+						.themed &.active {
+							border: solid 1px $alt-secondary;
+						}
+
+					}
+
+					&.loaded {
+						li {
+
+							-webkit-transition: all 400ms ease-out;
+							-moz-transition: all 400ms ease-out;
+							-ms-transition: all 400ms ease-out;
+							-o-transition: all 400ms ease-out;
+							transition: all 400ms ease-out;
+							opacity: 1;
+						
+						
+						}
+					}
+				}
 			}
 
 			.project-info {
-				width: 32%;
+				width: rem-calc(300);
 				float: left;
 				height: 100%;
-
 				margin-top: 0;
+				background-color: $secondary;
 
 				.project-plate {
-					padding: rem-calc(20);
 					display: block;
 
 					h2, h3 {
 						margin: 0;
-						padding-right: rem-calc(60);
+						padding-right: rem-calc(35);
 					}
 
 					h2 {
-						font-size: rem-calc(36);
+						font-size: rem-calc(30);
 					}
 				}
 
-				.project-description {
-					padding: rem-calc(20);
-				}
 			}
 
 

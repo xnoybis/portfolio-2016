@@ -35,8 +35,6 @@ function onload() {
 	$(window).resize(resize);	
 	setTimeout(function() {
 
-		openProject({ elem: $(this).parents("li").data("id"), direction: 0});
-
 		// ea.ui.js - on window resize handlers
 		resize();
 
