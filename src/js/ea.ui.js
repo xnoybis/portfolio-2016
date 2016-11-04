@@ -72,6 +72,7 @@ function resize() {
 	$(".works-list li").each(function() {
 
 		$(this).find(".brand, .project-name").css("margin-top", "");
+		$(this).find("a").css("width", "");
 		
 		if (isXlarge) {
 			if ($(this).find(".project-name").outerHeight(false) >= $(this).find(".brand").outerHeight(false)) {
@@ -84,6 +85,8 @@ function resize() {
 				$(this).find(".project-name").css("margin-top", Math.floor(diff/2));
 			}
 		}
+
+		$(this).find("a").css("width", Math.floor($(this).find("a").outerWidth(false)));
 
 		$(this).find("a").css("padding-top", "");
 		$(this).find(".alt").css("margin-top", "");
@@ -149,7 +152,21 @@ function resize() {
 		}
 	});
 
+	// close mobile nav on desktop 
+
 	if (isLarge) $("nav").removeClass("opened");
+
+	// center projects wrapper
+
+	$(".project-details").css("margin-top", "");
+	$(".project-wrapper").css("padding-top", "");
+	if (isXlarge) {
+		if ($(".project-details").outerHeight(false) < winH) {
+			var offset = Math.floor( (winH - $(".project-details").outerHeight(false))/2 );
+			$(".project-wrapper").css("padding-top", 0);
+			$(".project-details").css("margin-top", offset);
+		}
+	}
 
 	updatePosition(true);
 
@@ -168,13 +185,12 @@ function enableInteractions() {
 		e.preventDefault();
 
 		// ea.works.js
-		openProject({ elem: $(this).parents("li").data("id"), direction: 0});
+		openProject($(this).parents("li").data("id"));
 	});
 
 	// project close
-	$(".project-holder .project-info").on("click", function(e) {
+	$(".details-close").on("click", function(e) {
 		e.preventDefault();
-
 		closeProjects();
 	});
 

@@ -1,13 +1,10 @@
-function openProject(projObj) {
-
-	var elem = projObj.elem;
-	var direction = projObj.direction;
+function openProject(id) {
 
 	// open project overlay
 	if (!$(".project-wrapper").hasClass("opened")) {
 		$(".project-wrapper").addClass("opened");
-		$(".site").css("height", 0);
 		lastPosition = currentScroll;
+		$(".site").css("height", 0);		
 		$(window).scrollTop(0);
 		resize();
 	}
