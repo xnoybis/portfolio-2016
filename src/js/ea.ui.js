@@ -175,9 +175,6 @@ function resize() {
 
 function enableInteractions() {
 
-	// cross-browser 60 fps (fingers crossed!)
-	//window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(f){setTimeout(f, 1000/60)}
-
 	$('body').on('touchmove', function() { updatePosition(false) });
 	$(window).on("scroll", function() { updatePosition(false) });
 
@@ -187,12 +184,6 @@ function enableInteractions() {
 
 		// ea.works.js
 		openProject($(this).parents("li").data("id"));
-	});
-
-	// project close
-	$(".details-close").on("click", function(e) {
-		e.preventDefault();
-		closeProjects();
 	});
 
 	$(".menu-toggle").on("click", function(e) {

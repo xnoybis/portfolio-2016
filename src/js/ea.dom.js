@@ -55,7 +55,8 @@ function processDom() {
 
 	$(".project-wrapper").appendTo("body");
 	$(".project-wrapper").find(".project").clone().appendTo(".projects-inner");
-	$(".project-wrapper").find(".project").first().addClass("project-holder");
+	$(".project-wrapper").find(".project").first().removeAttr("class").addClass("project project-holder");
+	$(".project-holder").prepend("<div class='project-images'><div class='main-image'><span><span><i class='animate-spin icon-spin1'></i></span></span></div><ul class='image-list'></ul></div>");
 	$(".project-holder").find(".project-info").clone().addClass("top-info hide-for-xlarge").prependTo(".project-holder");
 
 	// add folded corner element to skill items

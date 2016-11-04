@@ -1,5 +1,15 @@
 function openProject(id) {
 
+	// set contents
+
+	$(".project-holder").find(".project-info").html($(".project."+id).find(".project-info").html());
+
+	// project close event
+	$(".project-holder .details-close").on("click", function(e) {
+		e.preventDefault();
+		closeProjects();
+	});
+
 	// open project overlay
 	if (!$(".project-wrapper").hasClass("opened")) {
 
@@ -18,7 +28,6 @@ function openProject(id) {
 
 	$(".project-holder").find(".main-image").find("img").remove();
 	var imgArr = $(".project."+id).data("images").split(",");
-	console.log(imgArr);
 
 	var imageStr = "";
 	var thumbStr = "";
@@ -35,7 +44,6 @@ function openProject(id) {
 			$(".project-holder").find(".main-image").find("span").addClass("loaded"); 
 			$(".project-holder").find(".image-list").addClass("loaded"); 
 		}, 500);
-		console.log("loaded!");
 	});
 
 	$(".project-holder").find(".image-list").find("li").first().addClass("active");
