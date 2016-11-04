@@ -1,7 +1,7 @@
 <div class="project glohealth" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
 
 	<div class="project-images">
-		<div class="main-image"><span></span></div>
+		<div class="main-image"><span><span><i class="animate-spin icon-spin1"></i></span></span></div>
 		<ul class="image-list"></ul>
 	</div>
 

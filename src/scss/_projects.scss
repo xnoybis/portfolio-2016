@@ -1203,8 +1203,8 @@
 						border-right: 0;
 					}
 
-					span {
-						display: block;
+					& > span {
+						display: table;
 						position: absolute;
 						z-index: 3005;
 						background-color: $aux;
@@ -1216,6 +1216,14 @@
 						-ms-transition: all 0ms ease-out;
 						-o-transition: all 0ms ease-out;
 						transition: all 0ms ease-out;
+						color: $primary;
+						text-align: center;
+						font-size: rem-calc(30);
+
+						span {
+							display: table-cell;
+							vertical-align: middle;
+						}
 
 						.themed & {
 							background-color: $alt-aux;
@@ -1290,8 +1298,8 @@
 							width: rem-calc(60);
 							height: rem-calc(35);
 							overflow: hidden;
-
 							border: solid 1px $secondary;
+							cursor: pointer;
 
 							.themed & {
 								border: solid 1px $alt-aux;
