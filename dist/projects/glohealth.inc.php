@@ -1,17 +1,8 @@
 <div class="project glohealth" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
 
 	<div class="project-images">
-
-		<div class="main-image">
-			<span></span>
-		</div>
-		
-		<ul class="image-list">
-			<li><span></span><div></div></li>
-			<li><span></span><div></div></li>
-			<li><span></span><div></div></li>
-		</ul>
-
+		<div class="main-image"><span></span></div>
+		<ul class="image-list"></ul>
 	</div>
 
 	<div class="project-info">
