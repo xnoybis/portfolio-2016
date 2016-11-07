@@ -706,9 +706,10 @@
 			li {
 				padding-left: 0.9375rem;
 				margin-bottom: 0.9375rem;
+				height: rem-calc(235);
 
 				a {
-					min-height: rem-calc(235);
+					height: rem-calc(235);
 					padding-top: 0;
 					padding-bottom: 0;
 					
