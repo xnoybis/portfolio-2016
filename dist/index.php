@@ -5,10 +5,16 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,maximum-scale=1"/>
-	<meta name="description" content=""/>
-	<meta name="keywords" content=""/>
+	<meta name="author" content="Luke Jakimowicz - Evident Agenda">
+	<meta name="description" content="portfolio of Luke Jakimowicz - full stack developer based in Dublin, Ireland">
+	<meta name="keywords" content="luke jakimowicz, web developer, front-end developer, back-end developer, full stack developer, html 5, css 3, javascript, jquery, foundation, bootstrap, sass, portfolio, php, mysql, gulp, grunt, node.js, npm, ajax, mvc, freelance, freelancer"/>
 
-	<title>Document</title>
+	<title>Evident Agenda - portfolio of work by Luke Jakimowicz</title>
+
+	<!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"/><![endif]-->
+	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png"/>
+	<link rel="icon" href="img/favicon.png"/>
+
 	<link href="https://fonts.googleapis.com/css?family=Muli|Oswald:300,700" rel="stylesheet"/>
 	<link rel="stylesheet" href="css/foundation.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
@@ -81,7 +87,7 @@
 					<div class="profile-location columns small-8 medium-8 large-4"><div><h5>Dublin<br/>Ireland<span>Location</span></h5></div></div>
 					<div class="profile-exp columns small-8 medium-8 large-4"><div><h5><?php echo getElapsedYears('2000-10-01'); ?><span>Years<br/>of experience</span></h5></div></div>
 					<div class="profile-mileage columns small-8 medium-8 large-4"><div><h5>100+<span>Completed<br/>projects</span></h5></div></div>
-					<div class="profile-cv columns small-24 large-4"><div><a href="#" target="_blank"><span>Download <strong>CV</strong></span></a></div></div>
+					<div class="profile-cv columns small-24 large-4"><div><a href="luke-jakimowicz-cv-en.pdf" target="_blank"><span>Download <strong>CV</strong></span></a></div></div>
 					
 				</section>
 
