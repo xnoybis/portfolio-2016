@@ -170,7 +170,7 @@ function resize() {
 	}
 
 	$(".home").css("height", "");
-	if ($(".home").find(".hold").outerHeight(false) < Math.ceil(winH-navH-$(".continue").outerHeight(true))) {
+	if ($(".home").find(".hold").outerHeight(false) < Math.ceil(winH-navH-$(".continue").outerHeight(false))) {
 		$(".home").css("height", Math.ceil(winH-navH));
 	}
 
@@ -206,7 +206,7 @@ function enableInteractions() {
 		if (isXlarge) targetScroll += $(id).find(".header-cover").outerHeight(false);
 
 		var dist = Math.abs( $(window).scrollTop() - targetScroll );
-		$("html, body").animate({ 
+		$("html, body").stop().animate({ 
 			scrollTop: targetScroll
 		}, 800, "easeOutCubic");
 	});

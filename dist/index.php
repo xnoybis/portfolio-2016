@@ -296,6 +296,11 @@
 
 			</section>
 
+			<footer class="row">
+				<p>Copyright &copy; <?php echo date("Y"); ?> Evident Agenda</p>
+				<a href="https://github.com/xnoybis/portfolio-2016" target="_blank">View code</a>
+			</footer>
+
 		</div>
 		
 	</div>
