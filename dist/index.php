@@ -180,6 +180,7 @@
 						<h2 class="osb">Next on the todo list</h2>
 						<p>There's always something new on the horizon so I already have a shortlist of technologies I'm excited to work with and master next.</p>
 						<ul class="skillset">
+							<li class="secondary">VueJS</li>
 							<li class="secondary">AngularJS 2</li>
 							<li class="secondary">Webpack</li>
 							<li class="secondary">ECMAScript 6<br/>&amp; TypeScript</li>
