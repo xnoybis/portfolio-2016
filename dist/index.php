@@ -208,8 +208,8 @@
 					
 					<li data-id="glohealth" class="glo columns small-24 medium-12 large-14"><a><h3>Glohealth</h3></a></li>
 					<li data-id="first" class="dan columns small-24 medium-12 large-10"><a><h3>First<br/>1000 Days</h3></a></li>
-					<li data-id="ginger" class="jam columns small-24 medium-12 large-10"><a><h3>Ginger<br/>and Lime</h3></a></li>
-					<li data-id="dragonsden" class="boi columns small-24 medium-12 large-14"><a><h3>The Sixth<br/>Dragon</h3></a></li>
+					<li data-id="dragonsden" class="boi columns small-24 medium-12 large-10"><a><h3>The Sixth<br/>Dragon</h3></a></li>
+					<li data-id="ginger" class="jam columns small-24 medium-12 large-14"><a><h3>Ginger<br/>and Lime</h3></a></li>
 					<li data-id="beatlcr" class="glo columns small-24 medium-12 large-14"><a><h3>Beat LCR</h3></a></li>
 					<li data-id="blackbarrel" class="jam columns small-24 medium-12 large-10"><a><h3>Black<br/>Barrel</h3></a></li>				
 					<li data-id="ripple" class="rip columns small-24 medium-12 large-10"><a><h3>Ripple<br/>Platform</h3></a></li>
@@ -229,7 +229,17 @@
 							<?php 
 
 								include("projects/glohealth.inc.php");
-								include("projects/glohealth.inc.php"); 
+								include("projects/first.inc.php");
+								include("projects/ginger.inc.php");
+								include("projects/dragon.inc.php");
+								include("projects/lcr.inc.php");
+								include("projects/barrel.inc.php");
+								include("projects/ripple.inc.php");
+								include("projects/jdiff.inc.php");
+								include("projects/comedy.inc.php");
+								include("projects/windows.inc.php");
+								include("projects/coke.inc.php");
+								include("projects/portfolio.inc.php");
 
 							?>
 

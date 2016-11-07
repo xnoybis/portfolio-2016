@@ -52,5 +52,4 @@ function onload() {
 
 	}, 500);
 
-
 }
