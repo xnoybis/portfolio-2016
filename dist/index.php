@@ -12,7 +12,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Muli|Oswald:300,700" rel="stylesheet"/>
 	<link rel="stylesheet" href="css/foundation.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
+	<!--[if lte IE 8]><style>.site { display: none; }</style><![endif]-->
 	<!--[if lte IE 9]><style>.loader { display: none; }</style><![endif]-->
+	
 
 </head>
 <body>
@@ -22,6 +24,11 @@
 		<div class="pane-down"></div>		
 		<div class="holder"><div class="wrap"><span></span><span></span><span></span><span></span><span></span></div></div>
 	</div>
+
+	<!--[if lte IE 8]>
+	<p class="oldie">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
 
 	<div class="site">
 
