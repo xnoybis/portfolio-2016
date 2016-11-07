@@ -1,4 +1,4 @@
-<div class="project first" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project first" data-images="first1.jpg,first2.jpg,first3.jpg,first4.jpg,first5.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>First 1000 Days</h2>

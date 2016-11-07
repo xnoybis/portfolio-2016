@@ -1,4 +1,4 @@
-<div class="project dragonsden" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project dragonsden" data-images="dragon1.jpg,dragon2.jpg,dragon3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>The Sixth Dragon</h2>

@@ -1,4 +1,4 @@
-<div class="project windows" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project windows" data-images="windows1.jpg,windows2.jpg,windows3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Meet Windows 8</h2>

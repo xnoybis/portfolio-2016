@@ -1,4 +1,4 @@
-<div class="project blackbarrel" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project blackbarrel" data-images="barrel1.jpg,barrel2.jpg,barrel3.jpg,barrel4.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Jameson Black Barrel</h2>

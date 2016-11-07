@@ -1,4 +1,4 @@
-<div class="project ripple" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project ripple" data-images="ripple1.jpg,ripple2.jpg,ripple3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Ripple Platform</h2>

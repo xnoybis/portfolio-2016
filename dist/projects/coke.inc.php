@@ -1,4 +1,4 @@
-<div class="project coke" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project coke" data-images="coke1.jpg,coke2.jpg,coke3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Coke Cities</h2>

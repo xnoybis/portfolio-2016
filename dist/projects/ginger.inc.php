@@ -1,4 +1,4 @@
-<div class="project ginger" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project ginger" data-images="lime1.jpg,lime2.jpg,lime3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Jameson Ginger and Lime</h2>

@@ -159,12 +159,6 @@
 
 				&.social {
 
-					& > div {
-						a {
-							background-color: $black;
-						}
-					}
-
 					& > div:nth-of-type(3n+1) {
 						padding-left: 0;
 						padding-right: rem-calc(8);

@@ -1,4 +1,4 @@
-<div class="project portfolio" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project portfolio" data-images="old1.jpg,old2.jpg,old3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Previous Portfolio</h2>

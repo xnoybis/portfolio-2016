@@ -1,4 +1,4 @@
-<div class="project jdiff" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project jdiff" data-images="jdiff1.jpg,jdiff2.jpg,jdiff3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Jameson Dublin International Film Festival</h2>

@@ -1,4 +1,4 @@
-<div class="project beatlcr" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project beatlcr" data-images="lcr1.jpg,lcr2.jpg,lcr3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Beat LCR</h2>

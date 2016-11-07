@@ -1,4 +1,4 @@
-<div class="project vodafone" data-images="glo1.jpg,glo2.jpg,glo3.jpg,glo4.jpg">
+<div class="project vodafone" data-images="vodafone1.jpg,vodafone2.jpg,vodafone3.jpg">
 	<div class="project-info">
 		<div class="project-plate">
 			<h2>Vodafone Comedy Festival</h2>
