@@ -53,7 +53,14 @@
 		<div class="wrap columns">
 
 			<section class="page home dark row" id="home">
-
+				<div class="wrap">
+					<div class="hold">
+						<h5>Welcome to</h5>
+						<h1>Evident <span>Agenda</span></h1>
+						<h2>Portfolio of digital work <span>by Luke Jakimowicz</span></h2>
+					</div>
+				</div>
+				<a class="continue" href="#profile"><i class="icon-down-open"></i></a>
 			</section>
 
 			<section class="page profile dark row" id="profile">
