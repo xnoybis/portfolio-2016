@@ -28,7 +28,7 @@ function init() {
 	// ea.dom.js - append required html elements throughout the site
 	processDom();
 
-	console.log("\n\nWelcome to Evident Agenda.\nFeel free to tinker.\nYou can also give me a shout at hello@lj.ie\n\n");
+	console.log("\n\nWelcome to Evident Agenda.\nFeel free to tinker.\nYou can also give me a shout at "+atob('aGVsbG9AbGouaWU=')+"\n\n");
 
 }
 
