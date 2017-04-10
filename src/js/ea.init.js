@@ -28,7 +28,7 @@ function init() {
 	// ea.dom.js - append required html elements throughout the site
 	processDom();
 
-	console.log("\n\nWelcome to Evident Agenda.\nFeel free to tinker.\nYou can also give me a shout at luke@evidentagenda.com\n\n");
+	console.log("\n\nWelcome to Evident Agenda.\nFeel free to tinker.\nYou can also give me a shout at hello@lj.ie\n\n");
 
 }
 
@@ -36,6 +36,9 @@ function onload() {
 
 	$(window).resize(resize);	
 	setTimeout(function() {
+
+		$(".mailto span").html(atob('aGVsbG9AbGouaWU='));
+		$(".mailto").attr("href", "mailto:"+atob('aGVsbG9AbGouaWU='));
 
 		// ea.ui.js - on window resize handlers
 		resize();

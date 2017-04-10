@@ -108,8 +108,11 @@
 							<li>HTML 5</li>
 							<li>CSS 3</li>
 							<li>JavaScript</li>
+							<li>ECMAScript 6</li>
 							<li>jQuery</li>
 							<li>SASS</li>
+							<li>VueJS 2</li>
+							<li>Webpack</li>
 							<li class="secondary">gulp</li>
 							<li class="secondary">bower</li>
 							<li class="secondary">Foundation</li>
@@ -128,13 +131,13 @@
 							<li>SQL</li>
 							<li>Wordpress</li>
 							<li>MySQL</li>
+							<li>Laravel</li>
+							<li>Lumen</li>
 							<li class="secondary">composer</li>
 							<li class="secondary">SlimPHP</li>
 							<li class="secondary">Redbean</li>
 							<li class="secondary">Twig</li>
 							<li class="secondary">MVC</li>
-							<li class="tertiary">Drupal</li>
-							<li class="tertiary">PostgreSQL</li>
 						</ul>
 					</section>
 					<section class="skills columns small-24 large-12 xlarge-6">
@@ -161,8 +164,10 @@
 						<ul class="skillset">
 							<li>git</li>
 							<li>Adobe Suite</li>
-							<li>Sublime Text</li>
+							<li>Visual Studio Code</li>
 							<li>LAMP stack</li>
+							<li>Ubuntu</li>
+							<li class="secondary">Sublime Text</li>
 							<li class="secondary">Atom</li>
 							<li class="secondary">Apache<br/>administration</li>
 							<li class="secondary">bash</li>
@@ -180,11 +185,8 @@
 						<h2 class="osb">Next on the todo list</h2>
 						<p>There's always something new on the horizon so I already have a shortlist of technologies I'm excited to work with and master next.</p>
 						<ul class="skillset">
-							<li class="secondary">VueJS</li>
-							<li class="secondary">AngularJS 2</li>
-							<li class="secondary">Webpack</li>
-							<li class="secondary">ECMAScript 6<br/>&amp; TypeScript</li>
-							<li class="secondary">Babel</li>
+							<li class="secondary">React</li>
+							<li class="secondary">TypeScript</li>
 						</ul>
 					</section>
 
@@ -287,7 +289,7 @@
 
 					<div class="contact-row">
 
-						<div class="columns small-24 large-16"><a href="mailto:luke@evidentagenda.com"><i class="icon-mail-alt"></i> luke@evidentagenda.com</a></div>
+						<div class="columns small-24 large-16"><a href="mailto:" class="mailto"><i class="icon-mail-alt"></i> <span></span></a></div>
 						<div class="columns small-24 large-8"><a href="skype:lukasz.jakimowicz"><i class="icon-skype"></i> lukasz.jakimowicz</a></div>
 
 					</div>
